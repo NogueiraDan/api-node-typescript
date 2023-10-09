@@ -1,0 +1,18 @@
+{
+  "b9736a47-b00a-46bd-928e-3afc6364045d": {
+    "id": "b9736a47-b00a-46bd-928e-3afc6364045d",
+    "name": "Iphone",
+    "price": 1000,
+    "quantity": 20,
+    "category": "Smartphone",
+    "image": "image_url.png"
+  },
+  "bf06a42e-4c80-435b-b743-5c687177971f": {
+    "id": "bf06a42e-4c80-435b-b743-5c687177971f",
+    "name": "Lenovo Ideapad3i",
+    "price": 2500,
+    "quantity": 10,
+    "category": "Notebooks",
+    "image": "image_url.png"
+  }
+}

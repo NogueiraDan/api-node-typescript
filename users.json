@@ -1,0 +1,26 @@
+{
+  "51286342-4d19-4d64-8395-eb23abecbfcc": {
+    "id": "51286342-4d19-4d64-8395-eb23abecbfcc",
+    "username": "joao",
+    "email": "joao@test.com",
+    "password": "$2a$10$Mcgkie5aJgapzEW.IiCYGOjt8HgDMfJqFWAx3aOmYoA5ObX0cXKim"
+  },
+  "e5b970bf-51a0-483b-9f7b-67c290122312": {
+    "id": "e5b970bf-51a0-483b-9f7b-67c290122312",
+    "username": "antonio",
+    "email": "antonio@test.com",
+    "password": "$2a$10$n3DfrErQQINFwEqYczVgHOp2ucMjmlZyQN9RnuydqHIqMUy9J7paW"
+  },
+  "fc6ff343-9a66-4519-99d2-4521370f365b": {
+    "id": "fc6ff343-9a66-4519-99d2-4521370f365b",
+    "username": "jose",
+    "email": "jose@test.com",
+    "password": "$2a$10$GhQ1cRFF1ip1uwIb7QPceO2gAfY5crAIZEOfc2RWL6VOALphzSeJC"
+  },
+  "f20a13f1-6ff1-4808-ad96-d612ff22e7c4": {
+    "id": "f20a13f1-6ff1-4808-ad96-d612ff22e7c4",
+    "username": "John Doe",
+    "email": "johndoe@teste.com",
+    "password": "$2a$10$uEz1l5hbeE.4vktvO5m7z.nIx2gcV/41vcjxTR7dbdrcY8Q2pD2O2"
+  }
+}

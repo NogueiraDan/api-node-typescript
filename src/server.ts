@@ -13,7 +13,9 @@ const server = express();
 server.use(express.json());
 server.use(express.urlencoded({ extended: true }));
 
-
+server.get("/", (req: Request, res: Response)=>{
+  return res.send({message: "Rota Inicial API Node + Typescript + Repository Pattern"})
+})
 
 // ROTAS DA V1 DA API
 server.get("/api/v1", (req: Request, res: Response) => {

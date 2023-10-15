@@ -5,7 +5,7 @@ import {StatusCodes} from "http-status-codes"
 
 export const productRouter = express.Router()
 
-productRouter.get('/products', async (req : Request, res : Response) => {
+productRouter.get('/', async (req : Request, res : Response) => {
     try {
        const allProducts = await database.findAll(req)
 
@@ -19,7 +19,7 @@ productRouter.get('/products', async (req : Request, res : Response) => {
     }
 })
 
-productRouter.get("/product/:id", async (req : Request, res : Response) => {
+productRouter.get("/:id", async (req : Request, res : Response) => {
     try {
         const product = await database.findOne(req.params.id)
 
@@ -34,7 +34,7 @@ productRouter.get("/product/:id", async (req : Request, res : Response) => {
 })
 
 
-productRouter.post("/product", async (req : Request, res : Response) => {
+productRouter.post("/", async (req : Request, res : Response) => {
     try {
         const {name, price, quantity, image} = req.body
 
@@ -48,7 +48,7 @@ productRouter.post("/product", async (req : Request, res : Response) => {
     }
 })
 
-productRouter.put("/product/:id", async (req : Request, res : Response) => {
+productRouter.put("/:id", async (req : Request, res : Response) => {
     try {
         const id = req.params.id
 
@@ -69,7 +69,7 @@ productRouter.put("/product/:id", async (req : Request, res : Response) => {
 })
 
 
-productRouter.delete("/product/:id", async (req : Request, res : Response) => {
+productRouter.delete("/:id", async (req : Request, res : Response) => {
     try {
         const getProduct = await database.findOne(req.params.id)
 

@@ -5,7 +5,7 @@ import * as database from "./user.controller";
 
 export const userRouter = express.Router();
 
-userRouter.post("/register", async (req: Request, res: Response) => {
+userRouter.post("/", async (req: Request, res: Response) => {
   try {
     const { username, email, password } = req.body;
 
@@ -31,7 +31,7 @@ userRouter.post("/register", async (req: Request, res: Response) => {
   }
 });
 
-userRouter.get("/users", async (req: Request, res: Response) => {
+userRouter.get("/", async (req: Request, res: Response) => {
   try {
     const allUsers: UnitUser[] = await database.findAll();
 
@@ -49,7 +49,7 @@ userRouter.get("/users", async (req: Request, res: Response) => {
   }
 });
 
-userRouter.get("/user/:id", async (req: Request, res: Response) => {
+userRouter.get("/:id", async (req: Request, res: Response) => {
   try {
     const user: UnitUser = await database.findOne(req.params.id);
 
@@ -66,39 +66,7 @@ userRouter.get("/user/:id", async (req: Request, res: Response) => {
 });
 
 
-// userRouter.post("/login", async (req: Request, res: Response) => {
-//   try {
-//     const { email, password } = req.body;
-
-//     if (!email || !password) {
-//       return res
-//         .status(StatusCodes.BAD_REQUEST)
-//         .json({ error: "Please provide all the required parameters.." });
-//     }
-
-//     const user = await database.findByEmail(email);
-
-//     if (!user) {
-//       return res
-//         .status(StatusCodes.NOT_FOUND)
-//         .json({ error: "No user exists with the email provided.." });
-//     }
-
-//     const comparePassword = await database.comparePassword(email, password);
-
-//     if (!comparePassword) {
-//       return res
-//         .status(StatusCodes.BAD_REQUEST)
-//         .json({ error: `Incorrect Password!` });
-//     }
-
-//     return res.status(StatusCodes.OK).json({ "Login com sucesso": user });
-//   } catch (error) {
-//     return res.status(StatusCodes.INTERNAL_SERVER_ERROR).json({ error });
-//   }
-// });
-
-userRouter.put("/user/:id", async (req: Request, res: Response) => {
+userRouter.put("/:id", async (req: Request, res: Response) => {
   try {
     const { username, email, password } = req.body;
 
@@ -125,7 +93,7 @@ userRouter.put("/user/:id", async (req: Request, res: Response) => {
   }
 });
 
-userRouter.delete("/user/:id", async (req: Request, res: Response) => {
+userRouter.delete("/:id", async (req: Request, res: Response) => {
   try {
     const id = req.params.id;
 

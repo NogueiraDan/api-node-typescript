@@ -3,6 +3,7 @@ import { StatusCodes } from "http-status-codes";
 import { config } from "dotenv";
 import { connectDatabase } from "./v2/database/db.config";
 import { userRouter } from "./v1/users/user.routes";
+import { productRouter } from "./v1/products/product.routes";
 import router from "./v2/routes/userRoutes";
 
 
@@ -24,6 +25,7 @@ server.get("/api/v1", (req: Request, res: Response) => {
     .json({ message: "Rota inicial da V1 da API " });
 });
 server.use("/api/v1/users", userRouter);
+server.use("/api/v1/products", productRouter)
 
 
 // ROTAS DA V2 DA API

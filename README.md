@@ -13,6 +13,20 @@ Desenvolvida para estudar os fundamentos do uso do Typescript com Nodejs, com a 
 - [x] Separação de Responsabilidades
 - [x] Principios de Injeção de Dependências & Inversão de Dependências.
 
+
+### 🗺️​ Rotas da API 
+- [x] "/": Rota inicial de apresentação
+- [x] "/api/v1": Rota inicial da v1 da api
+- [x] "/api/v2": Rota inicial da v2 da api
+- [x] "/api/v1/users": Rota para listar todos usuários na v1
+- [x] "/api/v2/users": Rota para listar todos usuários na v2 da api.
+- [x] "/api/v1/users/:id": Rota para listar um usuário específico na v1 da api.
+- [x] "/api/v2/users/:id": Rota para listar um usuário específico na v2 da api.
+- [x] "/api/v1/products": Rota para listar todos produtos na v1.
+- [x] "/api/v1/products/:id": Rota para um produto específico na v1 da api.
+**Detalhe Importante:** As demais requisições HTTP (PUT/PATCH, POST & DELETE) também são a partir da mesma rota do GET de cada versão, mudando apenas o verbo HTTP.
+
+
 ### 🔧 Instalação
 
 Instalando as dependencias:

@@ -11,7 +11,7 @@ export class UserService {
    * e não de detalhes. Isso torna seu código mais flexível e mais fácil de manter, 
    * porque você pode trocar a implementação concreta (por exemplo, UserRepository) 
    * por outra implementação que também implemente a interface IUserRepository 
-   * sem afetar o código do UserController.*/
+   * sem afetar o código do UserService.*/
   constructor(private userRepository: IUserRepository) {}
 
   async createUser(userData: Partial<UserDocument>) {

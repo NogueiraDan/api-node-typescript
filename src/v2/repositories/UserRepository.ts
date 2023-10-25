@@ -4,7 +4,6 @@ import IUserRepository from '../interfaces/IUserRepository';
 
 export default class UserRepository implements IUserRepository {
 
-  
   constructor(private userModel: Model<UserDocument>) {}
 
   async findAll(): Promise<UserDocument[]> {

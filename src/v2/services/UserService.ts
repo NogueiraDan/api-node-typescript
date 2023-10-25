@@ -2,6 +2,16 @@ import IUserRepository from "../interfaces/IUserRepository";
 import { UserDocument } from "../models/User";
 
 export class UserService {
+  /**A razão para utilizar o tipo da interface IUserRepository 
+   * em vez do tipo UserRepository no construtor do UserService 
+   * é aproveitar os princípios do "Dependency Inversion Principle" 
+   * (Princípio da Dependência Inversa) do SOLID. 
+   * Ao injetar a interface IUserRepository em vez da implementação concreta
+   * UserRepository, está seguindo o princípio de depender de abstrações 
+   * e não de detalhes. Isso torna seu código mais flexível e mais fácil de manter, 
+   * porque você pode trocar a implementação concreta (por exemplo, UserRepository) 
+   * por outra implementação que também implemente a interface IUserRepository 
+   * sem afetar o código do UserController.*/
   constructor(private userRepository: IUserRepository) {}
 
   async createUser(userData: Partial<UserDocument>) {

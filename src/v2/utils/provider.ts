@@ -1,7 +1,7 @@
-import { UserController } from './controllers/UserController';
-import { UserService } from './services/UserService';
-import UserRepository from './repositories/UserRepository';
-import UserModel from './models/User';
+import { UserController } from '../controllers/UserController';
+import { UserService } from '../services/UserService';
+import UserRepository from '../repositories/UserRepository';
+import UserModel from '../models/User';
 
 // Crie uma instância do Repository e outras dependências, se necessário
 const userModel = UserModel;
